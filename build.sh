@@ -11,8 +11,8 @@ ROOT=$(cd $(dirname $0) && pwd)
 # mvn package -Dmaven.test.skip=true
 
 ### Python ###
-# cd $ROOT/python/src
-# python -m compileall .
+cd $ROOT/python/src
+python -m compileall .
 
 ### C++ ###
 # cd $ROOT/c++

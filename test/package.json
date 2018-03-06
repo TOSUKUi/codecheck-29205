@@ -10,6 +10,7 @@
   "license": "Unlicense",
   "dependencies": {
     "co": "^4.6.0",
+    "codecheck": "^0.6.5",
     "copy": "^0.3.0",
     "expect": "^1.20.2",
     "lodash": "^4.2.0",

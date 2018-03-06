@@ -9,7 +9,7 @@ find $ROOT -type f -name "*.sh" | xargs chmod +x
 find $ROOT -type f -name "*.sh" | xargs sed -i "s/\r//g"
 
 # Build scripts
-$ROOT/build.sh
+# $ROOT/build.sh
 
 # Test start
 cd test && npm install && cd -
