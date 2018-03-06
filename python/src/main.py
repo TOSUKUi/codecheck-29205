@@ -133,7 +133,6 @@ def get_law_overtime_work(work_data, outlaw_work_time):
         for work_unit in work_datum[1]:
             law_overtime_work_time_a_day = 0
             law_work_time_a_day = 0
-
             # 全部土日の場合
             if work_unit[0].weekday() > 4:
                 law_overtime_work_time_a_day = 0
@@ -193,7 +192,7 @@ def get_outlaw_overtime_work(work_data, past_month_work_data):
                 # 1日8時間以上の時 一週間の労働時間に追加し, 法定外残業に残りを追加
                 if work_time_a_day > 480:
                     outlaw_work_time += work_time_a_day - 480
-                    week_work_time += work_time_a_day
+                    week_work_time += 480
                 # 1日8時間未満の時 一週間の労働時間に追加
                 else:
                     week_work_time += work_time_a_day
