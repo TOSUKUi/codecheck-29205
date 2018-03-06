@@ -6,10 +6,12 @@ import sys
 
 def main():
     # print(input())
-    f = open("data.txt")
-    work_data_input = f.readlines()
+    # f = open("data.txt")
+    lines = sys.stdin.readlines()
+    #work_data_input = f.readlines()
+    work_data_input = list(lines)
     month_str = work_data_input.pop(0)
-    print(month_str)
+    # print(month_str)
     month = datetime.strptime(month_str.strip(), "%Y/%m")
     past_month_work_unit_data = []
     work_unit_data = []
@@ -199,7 +201,7 @@ def get_outlaw_overtime_work(work_data, past_month_work_data):
                     week_work_time += work_time_a_day
         else:
             last_weekday = date.weekday()
-            print("あああ", outlaw_work_time)
+            #print("あああ", outlaw_work_time)
             if week_work_time > 40 * 60:
                 outlaw_work_time += week_work_time - 40 * 60
             week_work_time = 0
